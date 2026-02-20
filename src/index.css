@@ -1,0 +1,114 @@
+:root{
+  /* Paleta quente / pastel */
+  --bg: #fff7f2;          /* fundo pêssego bem suave */
+  --surface: #ffffff;     /* cartões */
+  --text: #2a1f1b;        /* castanho bem escuro */
+  --muted: #6f5b52;       /* texto secundário */
+  --border: #f0ddd3;
+
+  --primary: #e07a5f;     /* terracota suave */
+  --primary-2: #f2cc8f;   /* pastel amarelo */
+  --accent: #81b29a;      /* verde suave para detalhes */
+  --danger: #c44536;
+
+  --radius: 18px;
+  --shadow: 0 10px 30px rgba(42,31,27,0.08);
+
+  --container: 1040px;
+}
+
+*{ box-sizing: border-box; }
+
+html, body { height: 100%; }
+
+body{
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+a{ color: inherit; }
+
+.container{
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.section{
+  padding: 56px 0;
+}
+
+.card{
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.h1{ font-size: clamp(32px, 4vw, 44px); line-height: 1.08; margin: 0 0 12px; }
+.h2{ font-size: clamp(22px, 3vw, 28px); line-height: 1.2; margin: 0 0 10px; }
+.p{ color: var(--muted); line-height: 1.6; margin: 0; }
+
+.grid{
+  display: grid;
+  gap: 16px;
+}
+
+@media (min-width: 900px){
+  .grid-3{ grid-template-columns: repeat(3, 1fr); }
+  .grid-2{ grid-template-columns: repeat(2, 1fr); }
+}
+
+.btn{
+  border: 0;
+  border-radius: 999px;
+  padding: 12px 18px;
+  font-weight: 650;
+  cursor: pointer;
+  transition: transform 120ms ease, opacity 120ms ease;
+}
+
+.btn:active{ transform: translateY(1px); }
+
+.btn-primary{
+  background: var(--primary);
+  color: #fff;
+}
+
+.btn-secondary{
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.badge{
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(242,204,143,0.35);
+  border: 1px solid var(--border);
+  color: var(--muted);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.section-full {
+  padding: 56px 0;
+  width: 100%;
+}
+
+.section-alt {
+  background: rgba(242,204,143,0.18); /* pastel suave */
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.container-wide{
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
